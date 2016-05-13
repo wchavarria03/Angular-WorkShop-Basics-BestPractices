@@ -8,17 +8,28 @@
 
     <title>Angular Basics & Best Practices</title>
 
-  		<link rel="stylesheet" type="text/css" href="/styles/bootstrap.css" />
+  	<link rel="stylesheet" type="text/css" href="/styles/bootstrap.css" />
 
     <!-- SPELLS -->
     <script src="/scripts/angular.js"></script><!-- load angular -->
     <script src="/scripts/ui-bootstrap.js"></script><!-- load ui-bootstrap -->
+    <script src="/scripts/angular-ui-router.js"></script><!-- load ui-bootstrap -->
+
+    <!--App-->
     <script src="app.js"></script>
+    <script src="/app/signup/signup.controller.js"></script>
+    <script src="/app/login/login.controller.js"></script>
+
+
+
 
 </head>
 <body>
     <div>
     Welcome Guys!!
+    </div>
+    <div ui-view>
+
     </div>
 </body>
 </html>
