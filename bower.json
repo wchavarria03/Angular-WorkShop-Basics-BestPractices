@@ -1,0 +1,24 @@
+{
+  "name": "AngularBasic&BestPractices",
+  "description": "Angular App using Best Practices and Basics concepts",
+  "main": "server.js",
+  "authors": [
+    "Walter&Daniel"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/wchavarria03/Angular-WorkShop-Basics-BestPractices",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.5",
+    "bootstrap": "^3.3.6"
+  }
+}

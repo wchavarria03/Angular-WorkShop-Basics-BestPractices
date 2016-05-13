@@ -1,1 +1,0 @@
-var todoModule = angular.module('app', []);
