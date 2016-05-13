@@ -1,1 +1,1 @@
-var todoModule = angular.module('app', ['ui.bootstrap']);
+var appModule = angular.module('app', ['ui.bootstrap']);
