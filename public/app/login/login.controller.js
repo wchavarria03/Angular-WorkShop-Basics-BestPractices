@@ -1,4 +1,6 @@
 (function() {
+    'use strict';
+
     var controllerId = 'LoginController';
     angular
         .module('app')

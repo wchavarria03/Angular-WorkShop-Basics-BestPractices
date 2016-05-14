@@ -1,4 +1,6 @@
-(function () {
+(function() {
+    'use strict';
+
     var serviceId = 'SignupService';
     angular
         .module('app')

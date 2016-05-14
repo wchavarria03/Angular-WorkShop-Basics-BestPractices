@@ -1,13 +1,12 @@
-(function () {
-  'use strict';
+(function() {
+    'use strict';
 
-  angular.module('app', [
-    'ui.bootstrap',
-    'ui.router'
-  ]);
+    angular.module('app', [
+        'ui.bootstrap',
+        'ui.router'
+    ]);
 
-  angular.module('app').config( ['$stateProvider','$urlRouterProvider', Config ]);
-
+    angular.module('app').config( ['$stateProvider','$urlRouterProvider', Config ]);
 
   function Config ( $stateProvider, $urlRouterProvider ){
       $urlRouterProvider.otherwise('/');
@@ -24,6 +23,7 @@
           controller:'SignupController',
           controllerAs:'signup'
         })
+
     };
 
 })();
