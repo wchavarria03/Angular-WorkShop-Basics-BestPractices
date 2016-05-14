@@ -7,11 +7,11 @@ body {
   margin: auto;
 }
 
-.loginPage{
+.loginPage {
   width: 360px;
 }
 
-.signupPage{
+.signupPage {
   width: 500px;
 }
 
@@ -49,11 +49,11 @@ body {
   background: #43A047;
 }
 
-.disabled{
+.disabled {
   opacity: 0.5;
 }
 
-.pageTitle{
+.pageTitle {
   font-size: 29px;
   margin-top: 0px;
   margin-bottom: 20px;
