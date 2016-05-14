@@ -1,9 +1,26 @@
 {
-  "name": "AngularBasic-BestPractices",
+  "name": "angular-basics-bestpractices",
   "version": "0.0.0",
   "description": "Angular App using Best Practices and Basics concepts",
   "main": "server.js",
   "author": "Walter&Daniel",
+  "scripts": {
+    "start":"nodemon server.js"
+  },
+  "contributors": [
+    {
+      "name": "Walter Chavarria",
+      "email": "walter.chavarria@avantica.net"
+    },
+    {
+      "name": "Daniel Berrocal",
+      "email": "daniel.berrocal@avantica.net"
+    }
+  ],
+  "repository": {
+    "type":"git",
+    "url": "https://github.com/wchavarria03/Angular-WorkShop-Basics-BestPractices"
+  },
   "dependencies": {
     "angular-ui-bootstrap": "^1.3.2",
     "body-parser": "^1.4.3",
@@ -12,5 +29,11 @@
     "method-override": "^2.1.3",
     "morgan": "^1.1.1",
     "nodemon": "^1.9.2"
-  }
+  },
+  "keywords":[
+    "angular",
+    "basics",
+    "bestpractices"
+  ],
+  "license": "MIT"
 }

@@ -6,13 +6,10 @@
     'ui.router'
   ]);
 
-  angular.module('app').config([
-    '$stateProvider',
-    '$urlRouterProvider',
-    function(
-      $stateProvider,
-      $urlRouterProvider
-    ){
+  angular.module('app').config( ['$stateProvider','$urlRouterProvider', Config ]);
+
+
+  function Config ( $stateProvider, $urlRouterProvider ){
       $urlRouterProvider.otherwise('/');
       $stateProvider
         .state('login',{
@@ -27,7 +24,6 @@
           controller:'signupController',
           controllerAs:'signup'
         })
-    }
-  ]);
+    };
 
 })();
