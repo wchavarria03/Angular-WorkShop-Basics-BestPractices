@@ -1,5 +1,6 @@
-
 (function () {
+    'use strict';
+
     var serviceId = 'LoginService';
     angular
         .module('app')

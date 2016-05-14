@@ -1,4 +1,6 @@
-(function() {
+(function () {
+    'use strict';
+
     var controllerId = 'SignUpController';
     angular
         .module('app')
