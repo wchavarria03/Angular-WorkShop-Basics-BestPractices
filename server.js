@@ -16,6 +16,7 @@
     app.use('/scripts',  express.static(__dirname + '/bower_components/bootstrap/dist/js/'));
     app.use('/scripts',  express.static(__dirname + '/bower_components/angular/'));
     app.use('/scripts',  express.static(__dirname + '/node_modules/angular-ui-bootstrap/dist/'));
+    app.use('/scripts',  express.static(__dirname + '/bower_components/angular-ui-router/release/'));
     app.use(morgan('dev'));                                         // log every request to the console
     app.use(bodyParser.urlencoded({'extended':'true'}));            // parse application/x-www-form-urlencoded
     app.use(bodyParser.json());                                     // parse application/json

@@ -1,5 +1,5 @@
 {
-  "name": "AngularBasic&BestPractices",
+  "name": "angular-basics-bestpractices",
   "description": "Angular App using Best Practices and Basics concepts",
   "main": "server.js",
   "authors": [
@@ -19,6 +19,7 @@
   ],
   "dependencies": {
     "angular": "1.5.5",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "angular-ui-router": "^0.2.18"
   }
 }
