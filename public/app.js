@@ -1,12 +1,12 @@
 (function () {
   'use strict';
 
-  var app = angular.module('app', [
+  angular.module('app', [
     'ui.bootstrap',
     'ui.router'
   ]);
 
-  app.config([
+  angular.module('app').config([
     '$stateProvider',
     '$urlRouterProvider',
     function(
