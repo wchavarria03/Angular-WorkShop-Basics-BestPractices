@@ -1,6 +1,17 @@
-<div>
-  <h1>
-    {{signup.title}}
-  </h1>
+<div class="page signupPage">
+  <div class="form">
+    <h1 class="pageTitle">Sign Up</h1>
+    <div id="info-area">
+      <form id="signup-form" class="signup-form" name="signupForm" novalidate>
+        <input id="fullname" type="text" class="primaryInput" placeholder="Full Name" ng-model="signup.user.fullName" required/>
+        <input id="username" type="text" class="primaryInput" placeholder="Username" ng-model="signup.user.username" required/>
+        <input id="email" type="email" class="primaryInput" placeholder="Email" ng-model="signup.user.email" required/>
+        <input id="phone" type="text" class="primaryInput" placeholder="Phone" ng-model="signup.user.phone" required/>
+	      <input id="password" type="password" class="primaryInput" placeholder="Password" ng-model="signup.user.password" required/>
+        <input id="repassword" type="password" class="primaryInput" placeholder="Confirm Password" ng-model="signup.user.repassword" required/>
+		    <button type="button" ng-click="signup.signup(signup.user)" ng-disabled="signupForm.$invalid || signup.user.password!=signup.user.repassword" class="primaryButton" ng-class="{'disabled':signupForm.$invalid || signup.user.password!=signup.user.repassword }">sign up</button>
+	    </form>
 
+    </div>
+  </div>
 </div>

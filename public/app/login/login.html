@@ -1,6 +1,13 @@
-<div>
-  <h1>
-    {{login.title}}
-  </h1>
+<div class="page loginPage">
+  <div class="form">
+    <h1 class="pageTitle">Angular.js Workshop</h1>
+    <div id="info-area">
+      <form id="login-form" class="login-form" name="loginForm" novalidate>
+        <input id="name" type="text" class="primaryInput" placeholder="Username" ng-model="login.user.username" required/>
+	      <input id="password" type="password" class="primaryInput" placeholder="Password" ng-model="login.user.password" required/>
+		    <button type="button" ng-click="login.login(login.user.username,login.user.password)" ng-disabled="loginForm.$invalid" class="primaryButton" ng-class="{'disabled':loginForm.$invalid}">login</button>
+	    </form>
 
+    </div>
+  </div>
 </div>

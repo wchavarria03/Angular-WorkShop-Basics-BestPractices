@@ -15,13 +15,13 @@
         .state('login',{
           url:'/login',
           templateUrl:'/App/login/login.html',
-          controller:'loginController',
+          controller:'LoginController',
           controllerAs:'login'
         })
         .state('signup',{
           url:'/signup',
           templateUrl:'/App/signup/signup.html',
-          controller:'signupController',
+          controller:'SignupController',
           controllerAs:'signup'
         })
     };

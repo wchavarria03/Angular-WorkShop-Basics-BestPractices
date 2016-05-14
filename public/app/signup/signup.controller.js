@@ -1,5 +1,5 @@
 (function() {
-    var controllerId = 'SignUpController';
+    var controllerId = 'SignupController';
     angular
         .module('app')
         .controller(controllerId, [ '$scope', SignUpController]);
