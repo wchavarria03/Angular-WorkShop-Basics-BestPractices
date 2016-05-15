@@ -1,7 +1,55 @@
 <div class="page dashboardPage">
-    <h2>Welcome {{Dashboard.user.fullName}}</h2>
-    <button type="button" name="button" class="btn btn-danger" ng-click="Dashboard.logOut()">Log Out</button>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Welcome {{Dashboard.user.fullName}}</h2>
+        </div>
+        <div class="col-md-6">
+            <button type="button" name="button" class="btn btn-danger pull-right" ng-click="Dashboard.logOut()">Log Out</button>
+        </div>
+    </div>
+
     <div class="container-fluid">
-        <!--create table here, add ng-repeat to show all the users-->
+        <button type="button" name="button" class="btn btn-primary" ng-click="Dashboard.update()" ng-show="!Dashboard.loading && !Dashboard.updating">Update Users' Data</button>
+        <button type="button" name="button" class="btn btn-success" ng-click="Dashboard.save()" ng-show="!Dashboard.loading && Dashboard.updating">Save</button>
+        <p ng-show="Dashboard.loading">
+            Loading...
+        </p>
+        <table class="table table-striped" ng-show="!Dashboard.loading">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Website</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="u in Dashboard.users">
+                    <td>
+                        <p ng-if="!Dashboard.updating">{{u.name}}</p>
+                        <input type="text" name="name" class="primaryInput" ng-model="u.name" ng-if="Dashboard.updating">
+                    </td>
+                    <td>
+                        <p ng-if="!Dashboard.updating">{{u.username}}</p>
+                        <input type="text" name="uname" class="primaryInput" ng-model="u.username" ng-if="Dashboard.updating">
+                    </td>
+                    <td>
+                        <p ng-if="!Dashboard.updating">{{u.email}}</p>
+                        <input type="email" name="email" class="primaryInput" ng-model="u.email" ng-if="Dashboard.updating">
+                    </td>
+                    <td>
+                        <p ng-if="!Dashboard.updating">{{u.phone}}</p>
+                        <input type="text" name="phone" class="primaryInput" ng-model="u.phone" ng-if="Dashboard.updating">
+                    </td>
+                    <td>
+                        <p ng-if="!Dashboard.updating">{{u.website}}</p>
+                        <input type="text" name="website" class="primaryInput" ng-model="u.website" ng-if="Dashboard.updating">
+                    </td>
+                </tr>
+            </tbody>
+
+
+        </table>
     </div>
 </div>

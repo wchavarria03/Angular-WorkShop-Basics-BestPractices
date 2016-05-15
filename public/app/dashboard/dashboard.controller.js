@@ -10,6 +10,16 @@
         var vm = this;
         vm.user = JSON.parse(localStorage.getItem("loggedUser"));
         vm.users=[];
+        vm.loading=false;
+        vm.updating=false;
+
+        vm.update = function update(){
+            vm.updating=true;
+        }
+
+        vm.save = function save(){
+            vm.updating=false;
+        }
 
         vm.logOut = function logOut(){
             localStorage.removeItem("loggedUser");
@@ -17,8 +27,12 @@
         }
 
         function getUsers(){
-            //call DashboardService
-            // resolve the promise returned by DashboardService
+            vm.loading=true;
+            DashboardService.getUsers()
+                .then(function(response){
+                    vm.users=response.data;
+                    vm.loading=false;
+                });
         }
 
         getUsers();
