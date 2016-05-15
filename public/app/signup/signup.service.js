@@ -4,11 +4,16 @@
     var serviceId = 'SignupService';
     angular
         .module('app')
-		    .service(serviceId, ['$http',SignupService ]);
+	    .service(serviceId, ['$http',SignupService ]);
 
     function SignupService( $http ) {
+        this.users=[];
+
+        this.getUsers = function getUsers(){
+            return this.users;
+        }
         this.signup = function signup(user) {
-            //Call backend and return response
+            this.users.push(user);
         }
     };
 

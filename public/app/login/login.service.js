@@ -4,11 +4,21 @@
     var serviceId = 'LoginService';
     angular
         .module('app')
-		    .service(serviceId, [ '$http', LoginService]);
+	    .service(serviceId, [ '$http','SignupService', LoginService]);
 
-    function LoginService( $http ) {
+    function LoginService( $http, SignupService ) {
         this.login = function login(credentials) {
-            //Call backend and return response
+            var users = SignupService.getUsers();
+            var found=false;
+            users.forEach(function(u){
+                if(u.username==credentials.username && u.password==credentials.password){
+                    localStorage.setItem("loggedUser",JSON.stringify(u));
+                    found=true;
+                }
+            });
+            if(!found){
+                localStorage.removeItem("loggedUser");
+            }
         }
     }
 })();

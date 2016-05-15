@@ -4,19 +4,28 @@
     var controllerId = 'LoginController';
     angular
         .module('app')
-        .controller(controllerId, [ '$scope', LoginController ]);
+        .controller(controllerId, [ '$scope','LoginService', LoginController ]);
 
-    function LoginController($scope) {
-            var vm = this;
+    function LoginController($scope,LoginService) {
+        var vm = this;
 
-            vm.title = "Login Page";
+        vm.title = "Login Page";
 
-            vm.login = function login(user,password) {
-                var credentials = {
-                    user: user,
-                    password: password
-                };
-              //call login service and validate response
+        vm.login = function login(user,password) {
+            vm.error=false;
+            var credentials = {
+                username: user,
+                password: password
             };
-        }
+            LoginService.login(credentials);
+            var user = JSON.parse(localStorage.getItem("loggedUser"));
+            if(!user){
+                vm.error=true;
+            }else{
+                vm.user={};
+                alert("Welcome "+ user.fullName);
+              //go to X view
+            }
+          };
+      }
 })();
