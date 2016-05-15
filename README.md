@@ -17,20 +17,23 @@ Angular WorkShop - Basics and Best Practices
 *IIFE
 *app Module - submodules naming
 *named functions
-
-
 *ControllerAs (use this)
     +view (dotted object)
     +controller (vm = this)
     +route
+*Members up to top
 
 
 -Step-2
+*keep controllers light
+*move logic to services
 
+
+-Step-3
 
 --------------------------------------------------------------------------
 # IMPORTANT
-
+- validations
 - $on, $emit, $broadcast
 - directives
 - digest cycle
