@@ -19,6 +19,18 @@ Angular WorkShop - Basics and Best Practices
 *named functions
 
 
---------------------------------------------------------------------------
+*ControllerAs (use this)
+    +view (dotted object)
+    +controller (vm = this)
+    +route
+
 
 -Step-2
+
+
+--------------------------------------------------------------------------
+# IMPORTANT
+
+- $on, $emit, $broadcast
+- directives
+- digest cycle
