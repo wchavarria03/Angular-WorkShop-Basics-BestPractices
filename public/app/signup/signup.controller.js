@@ -9,8 +9,6 @@
     function SignUpController($scope,SignupService,$state) {
             var vm = this;
 
-            vm.title="SignUp Page";
-
             vm.signup = function signup(user) {
               SignupService.signup(user);
               vm.user={};

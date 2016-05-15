@@ -4,12 +4,10 @@
     var controllerId = 'LoginController';
     angular
         .module('app')
-        .controller(controllerId, [ '$scope','LoginService', LoginController ]);
+        .controller(controllerId, [ '$scope','LoginService', '$state', LoginController ]);
 
-    function LoginController($scope,LoginService) {
+    function LoginController($scope,LoginService,$state) {
         var vm = this;
-
-        vm.title = "Login Page";
 
         vm.login = function login(user,password) {
             vm.error=false;
@@ -23,7 +21,7 @@
                 vm.error=true;
             }else{
                 vm.user={};
-                alert("Welcome "+ user.fullName);
+                $state.go('dashboard');
               //go to X view
             }
           };
