@@ -3,14 +3,35 @@
     <h1 class="pageTitle">Sign Up</h1>
     <div id="info-area">
       <form id="signup-form" class="signup-form" name="signupForm" novalidate>
-        <input id="fullname" type="text" class="primaryInput" placeholder="Full Name" ng-model="signup.user.fullName" required/>
-        <input id="username" type="text" class="primaryInput" placeholder="Username" ng-model="signup.user.username" required/>
-        <input id="email" type="email" class="primaryInput" placeholder="Email" ng-model="signup.user.email" required/>
-        <input id="phone" type="text" class="primaryInput" placeholder="Phone" ng-model="signup.user.phone" required/>
-	      <input id="password" type="password" class="primaryInput" placeholder="Password" ng-model="signup.user.password" required/>
-        <input id="repassword" type="password" class="primaryInput" placeholder="Confirm Password" ng-model="signup.user.repassword" required/>
-		    <button type="button" ng-click="signup.signup(signup.user)" ng-disabled="signupForm.$invalid || signup.user.password!=signup.user.repassword" class="primaryButton" ng-class="{'disabled':signupForm.$invalid || signup.user.password!=signup.user.repassword }">sign up</button>
-	    </form>
+        <div class="form-group" >
+            <input id="fullname" name="fullname" type="text" class="primaryInput" placeholder="Full Name" ng-model="signup.user.fullName" required/>
+            <p ng-show="false" class="help-block">This field is required.</p>
+        </div>
+        <div class="form-group">
+            <input id="username" name="username" type="text" class=" primaryInput" placeholder="Username" ng-model="signup.user.username" required/>
+            <p ng-show="false" class="help-block">This field is required.</p>
+        </div>
+        <div class="form-group">
+            <input id="email" name="email" type="email" class="primaryInput" placeholder="Email" ng-model="signup.user.email" required/>
+            <p ng-show="false" class="help-block">This field is required.</p>
+        </div>
+        <div class="form-group">
+            <input id="phone" name="phone" type="text" class="primaryInput" placeholder="Phone" ng-model="signup.user.phone" required/>
+            <p ng-show="false" class="help-block">This field is required.</p>
+        </div>
+        <div class="form-group">
+            <input id="password" name="password" type="password" class="primaryInput" placeholder="Password" ng-model="signup.user.password" required/>
+            <p ng-show="false" class="help-block">This field is required.</p>
+        </div>
+        <div class="form-group">
+            <input id="repassword" name="repassword" type="password" class="primaryInput" placeholder="Confirm Password" ng-model="signup.user.repassword" required/>
+            <p ng-show="false" class="help-block">This field is required.</p>
+            <p ng-show="false" class="help-block">Password does not match the confirm password.</p>
+        </div>
+
+		    <button type="button" ng-click="signup.signup(signup.user)" class="primaryButton">sign up</button>
+
+      </form>
 
     </div>
   </div>
