@@ -25,15 +25,25 @@ Angular WorkShop - Basics and Best Practices
 
 
 -Step-2
-*keep controllers light
-*move logic to services
+* keep controllers light
+* move logic to services
+* validations
 
 
 -Step-3
+* landview
+* table with edit (ng-repeat)
+	+ digest cycle
+	+ two way data binding
+	+ one way data binding
+	+ "if" fix - to html
+
+-Step-4
+
 
 --------------------------------------------------------------------------
 # IMPORTANT
-- validations
 - $on, $emit, $broadcast
 - directives
-- digest cycle
+- angular copy
+- services logic
