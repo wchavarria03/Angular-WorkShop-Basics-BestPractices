@@ -9,12 +9,12 @@
     </div>
 
     <div class="container-fluid">
-        <button type="button" name="button" class="btn btn-primary" ng-click="Dashboard.update()" ng-show="!Dashboard.loading && !Dashboard.updating">Update Comments</button>
-        <button type="button" name="button" class="btn btn-success" ng-click="Dashboard.save()" ng-show="!Dashboard.loading && Dashboard.updating">Save</button>
-        <p ng-show="Dashboard.loading">
+        <button type="button" name="button" class="btn btn-primary" ng-click="Dashboard.update()" ng-if="!Dashboard.loading && !Dashboard.updating">Update Comments</button>
+        <button type="button" name="button" class="btn btn-success" ng-click="Dashboard.save()" ng-if="!Dashboard.loading && Dashboard.updating">Save</button>
+        <p ng-if="Dashboard.loading">
             Loading...
         </p>
-        <table class="table table-striped" ng-show="!Dashboard.loading">
+        <table class="table table-striped" ng-if="!Dashboard.loading">
             <thead>
                 <tr>
                     <th>#</th>
