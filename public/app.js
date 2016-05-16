@@ -50,10 +50,10 @@
     angular.module('app').filter('propsFilter', CustomFilter);
 
     function CustomFilter() {
-        return function(items, props) {
+        return function(items, search) {
             var out = [];
 
-            if (angular.isArray(items)) {
+            /*if (angular.isArray(items) && search !== "") {
               items.forEach(function(item) {
                 var itemMatches = false;
 
@@ -73,7 +73,7 @@
             } else {
               // Let the output be the input untouched
               out = items;
-          }
+          }*/
 
             return out;
       };
