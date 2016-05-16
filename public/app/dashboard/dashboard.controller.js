@@ -9,18 +9,18 @@
     function DashboardController($scope,DashboardService,$state) {
         var vm = this;
         vm.user = JSON.parse(localStorage.getItem("loggedUser"));
-        vm.users=[];
+        vm.comments=[];
 
         vm.logOut = function logOut(){
             localStorage.removeItem("loggedUser");
             $state.go('login');
         }
 
-        function getUsers(){
+        function getComments(){
             //call DashboardService
             // resolve the promise returned by DashboardService
         }
 
-        getUsers();
+        getComments();
       }
 })();

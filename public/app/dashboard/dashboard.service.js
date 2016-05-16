@@ -8,8 +8,8 @@
 
     function DashboardService( $http ) {
 
-        this.getUsers = function getUsers(){
-            // use $http to get users from http://jsonplaceholder.typicode.com/users
+        this.getComments = function getComments(){
+            // use $http to get comments from http://jsonplaceholder.typicode.com/comments
             // and return it
         }
 
