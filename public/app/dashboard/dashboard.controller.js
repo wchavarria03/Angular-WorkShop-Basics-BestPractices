@@ -9,7 +9,7 @@
     function DashboardController($scope,DashboardService,$state) {
         var vm = this;
         vm.user = JSON.parse(localStorage.getItem("loggedUser"));
-        vm.users=[];
+        vm.comments=[];
         vm.loading=false;
         vm.updating=false;
 
@@ -26,15 +26,15 @@
             $state.go('login');
         }
 
-        function getUsers(){
+        function getComments(){
             vm.loading=true;
-            DashboardService.getUsers()
+            DashboardService.getComments()
                 .then(function(response){
-                    vm.users=response.data;
+                    vm.comments=response.data;
                     vm.loading=false;
                 });
         }
 
-        getUsers();
+        getComments();
       }
 })();
