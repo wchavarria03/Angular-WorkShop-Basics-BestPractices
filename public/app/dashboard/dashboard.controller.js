@@ -12,6 +12,7 @@
         vm.comments=[];
         vm.loading=false;
         vm.updating=false;
+        vm.search="";
 
         vm.update = function update(){
             vm.updating=true;

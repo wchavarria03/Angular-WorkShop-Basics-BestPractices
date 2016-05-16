@@ -36,7 +36,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="u in Dashboard.comments | filter: Dashboard.search">
+                <tr ng-repeat="u in Dashboard.comments | propsFilter: {'postId':Dashboard.search, 'name':Dashboard.search}">
                     <td>
                         <p ng-if="!Dashboard.updating" ng-bind="::u.id"></p>
                         <input type="text" name="name" class="primaryInput" ng-model="u.id" ng-if="Dashboard.updating">
