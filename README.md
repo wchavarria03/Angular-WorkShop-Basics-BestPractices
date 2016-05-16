@@ -33,12 +33,17 @@ Angular WorkShop - Basics and Best Practices
 -Step-3
 * landview
 * table with edit (ng-repeat)
+	+directives
+*$http
+
+
+-Step-4
 	+ digest cycle
 	+ two way data binding
 	+ one way data binding
 	+ "if" fix - to html
 
--Step-4
+
 
 
 --------------------------------------------------------------------------
