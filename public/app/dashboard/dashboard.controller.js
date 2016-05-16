@@ -30,7 +30,7 @@
             vm.loading=true;
             DashboardService.getComments()
                 .then(function(response){
-                    vm.comments=response.data;
+                    vm.comments=response.data.slice(0,200);
                     vm.loading=false;
                 });
         }
