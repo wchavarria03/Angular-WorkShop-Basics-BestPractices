@@ -10,10 +10,10 @@
         this.login = function login(credentials) {
             var users = SignupService.getUsers();
             var found = false;
-            users.forEach(function(u) {
-                if(u.username == credentials.username && u.password == credentials.password) {
-                    localStorage.setItem("loggedUser",JSON.stringify(u));
-                    found = true;
+            found = users.some(function(user) {
+                if(user.username == credentials.username && user.password == credentials.password) {
+                    localStorage.setItem("loggedUser",JSON.stringify(user));
+                    return true;
                 }
             });
             if(!found) {
