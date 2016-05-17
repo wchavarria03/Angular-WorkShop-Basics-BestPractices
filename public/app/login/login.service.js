@@ -9,14 +9,14 @@
     function LoginService( $http, SignupService ) {
         this.login = function login(credentials) {
             var users = SignupService.getUsers();
-            var found=false;
-            users.forEach(function(u){
-                if(u.username==credentials.username && u.password==credentials.password){
+            var found = false;
+            users.forEach(function(u) {
+                if(u.username == credentials.username && u.password == credentials.password) {
                     localStorage.setItem("loggedUser",JSON.stringify(u));
-                    found=true;
+                    found = true;
                 }
             });
-            if(!found){
+            if(!found) {
                 localStorage.removeItem("loggedUser");
             }
         }
