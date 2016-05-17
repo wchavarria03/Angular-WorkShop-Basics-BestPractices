@@ -8,7 +8,7 @@
 
     function DashboardService( $http ) {
 
-        this.getComments = function getComments(){
+        this.getComments = function getComments() {
             return $http.get('http://jsonplaceholder.typicode.com/comments');
         }
 

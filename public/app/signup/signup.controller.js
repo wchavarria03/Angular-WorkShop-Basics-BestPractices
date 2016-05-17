@@ -4,15 +4,15 @@
     var controllerId = 'SignupController';
     angular
         .module('app')
-        .controller(controllerId, [ '$scope','SignupService','$state', SignUpController]);
+        .controller(controllerId, [ 'SignupService','$state', SignUpController]);
 
-    function SignUpController($scope,SignupService,$state) {
+    function SignUpController(SignupService,$state) {
             var vm = this;
 
             vm.signup = function signup(user) {
-              SignupService.signup(user);
-              vm.user={};
-              $state.go('login');
+                SignupService.signup(user);
+                vm.user = {};
+                $state.go('login');
             }
         }
 })();
