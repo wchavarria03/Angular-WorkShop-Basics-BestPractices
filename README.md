@@ -22,3 +22,9 @@ Angular WorkShop - Basics and Best Practices
 --------------------------------------------------------------------------
 
 -Step-2
+
+
+
+
+-Step-5
+     Directives and Components
