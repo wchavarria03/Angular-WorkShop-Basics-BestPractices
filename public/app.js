@@ -28,6 +28,12 @@
                 templateUrl:'/App/dashboard/dashboard.html',
                 controller:'DashboardController',
                 controllerAs:'Dashboard'
+            })
+            .state('users',{
+              url:'/users',
+              templateUrl:'/App/users/users.html',
+              controller:'UsersController',
+              controllerAs:'Users'
             });
     }
 

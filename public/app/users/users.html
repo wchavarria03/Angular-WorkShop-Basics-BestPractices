@@ -1,0 +1,62 @@
+<div class="page dashboardPage">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Welcome {{Users.user.fullName}}</h2>
+        </div>
+        <div class="col-md-6">
+            <button type="button" name="button" class="btn btn-danger pull-right" ng-click="Users.logOut()">Log Out</button>
+        </div>
+    </div>
+    <br>
+
+    <div class="container-fluid">
+        <div class="row" ng-if="!Users.loading">
+            <div class="col-md-4">
+                <input type="text" name="name" class="primaryInput" ng-model="Users.search" placeholder="Search...">
+            </div>
+            <div class="col-md-1">
+                <button type="button" name="button" class="btn btn-primary" ng-click="Users.update()" ng-if="!Users.updating">Update Comments</button>
+                <button type="button" name="button" class="btn btn-success" ng-click="Users.save()" ng-if="Users.updating">Save</button>
+            </div>
+
+        </div>
+
+
+        <p ng-if="Users.loading">
+            Loading...
+        </p>
+
+        <table class="table table-striped" ng-if="!Users.loading">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="u in Users.users | propsFilter: Users.search">
+                    <td>
+                        <p ng-if="!Users.updating" ng-bind="::u.id"></p>
+                        <input type="text" name="name" class="primaryInput" ng-model="u.id" ng-if="Users.updating">
+                    </td>
+                    <td>
+                        <p ng-if="!Users.updating" ng-bind="::u.name"></p>
+                        <input type="text" name="uname" class="primaryInput" ng-model="u.name" ng-if="Users.updating">
+                    </td>
+                    <td>
+                        <p ng-if="!Users.updating" ng-bind="::u.email"></p>
+                        <input type="email" name="email" class="primaryInput" ng-model="u.email" ng-if="Users.updating">
+                    </td>
+                    <td>
+                        <p ng-if="!Users.updating" ng-bind="::u.phone"></p>
+                        <input type="text" name="phone" class="primaryInput" ng-model="u.body" ng-if="Users.updating">
+                    </td>
+                </tr>
+            </tbody>
+
+
+        </table>
+    </div>
+</div>

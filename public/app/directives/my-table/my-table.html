@@ -1,0 +1,15 @@
+<table class="table table-striped" ng-if="!vm.loading">
+  <thead>
+  <tr>
+    <th ng-repeat="header in vm.headers">{{header.value}}</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="u in vm.data | propsFilter: vm.search">
+    <td ng-repeat="field in vm.fields">
+      <p ng-if="!vm.updating" ng-bind="::u[field]"></p>
+      <input type="text" name="name" class="primaryInput" ng-model="u[field]" ng-if="vm.updating">
+    </td>
+  </tr>
+  </tbody>
+</table>
