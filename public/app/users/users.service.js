@@ -12,6 +12,6 @@
             return $http.get('http://jsonplaceholder.typicode.com/users');
         }
 
-    };
+    }
 
 })();

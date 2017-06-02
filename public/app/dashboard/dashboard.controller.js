@@ -13,19 +13,21 @@
         vm.loading = false;
         vm.updating = false;
         vm.search = "";
+        vm.headers = [{value: '#'}, {value: 'Name'}, {value: 'Email'}, {value: 'Comment'}];
+        vm.fields = ['id', 'name', 'email', 'body'];
 
         vm.update = function update() {
             vm.updating = true;
-        }
+        };
 
         vm.save = function save() {
             vm.updating = false;
-        }
+        };
 
         vm.logOut = function logOut() {
             localStorage.removeItem("loggedUser");
             $state.go('login');
-        }
+        };
 
         function getComments() {
             vm.loading = true;
@@ -34,7 +36,7 @@
                     vm.comments = response.data.slice(0,200);
                     vm.loading = false;
                 });
-        }
+        };
 
         getComments();
       }

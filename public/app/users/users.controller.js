@@ -13,19 +13,21 @@
         vm.loading = false;
         vm.updating = false;
         vm.search = "";
+        vm.tableHeaders = [{value: '#'}, {value: 'Name'}, {value: 'Email'}, {value: 'Comment'}];
+        vm.tableFields = ['id', 'name', 'email', 'phone'];
 
         vm.update = function update() {
             vm.updating = true;
-        }
+        };
 
         vm.save = function save() {
             vm.updating = false;
-        }
+        };
 
         vm.logOut = function logOut() {
             localStorage.removeItem("loggedUser");
             $state.go('login');
-        }
+        };
 
         function getUsers() {
             vm.loading = true;

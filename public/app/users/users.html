@@ -26,37 +26,6 @@
             Loading...
         </p>
 
-        <table class="table table-striped" ng-if="!Users.loading">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Comment</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="u in Users.users | propsFilter: Users.search">
-                    <td>
-                        <p ng-if="!Users.updating" ng-bind="::u.id"></p>
-                        <input type="text" name="name" class="primaryInput" ng-model="u.id" ng-if="Users.updating">
-                    </td>
-                    <td>
-                        <p ng-if="!Users.updating" ng-bind="::u.name"></p>
-                        <input type="text" name="uname" class="primaryInput" ng-model="u.name" ng-if="Users.updating">
-                    </td>
-                    <td>
-                        <p ng-if="!Users.updating" ng-bind="::u.email"></p>
-                        <input type="email" name="email" class="primaryInput" ng-model="u.email" ng-if="Users.updating">
-                    </td>
-                    <td>
-                        <p ng-if="!Users.updating" ng-bind="::u.phone"></p>
-                        <input type="text" name="phone" class="primaryInput" ng-model="u.body" ng-if="Users.updating">
-                    </td>
-                </tr>
-            </tbody>
-
-
-        </table>
+        <my-table ng-if="!Users.loading" headers="Users.tableHeaders" fields="Users.tableFields" data="Users.users"></my-table>
     </div>
 </div>

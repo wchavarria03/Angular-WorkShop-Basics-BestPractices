@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  var directiveId = 'TableController';
+  var directiveId = 'myTable';
   angular
     .module('app')
     .directive(directiveId, function () {
@@ -9,12 +9,13 @@
           scope: {
             data: '=',
             headers: '=',
-            field: '='
+            fields: '='
           },
+          bindToController: true,
           restrict: 'E',
           controller: 'MyTableController',
           controllerAs: 'vm',
-          templateUrl: 'my-table.html'
+          templateUrl: 'app/directives/my-table/my-table.html'
         };
     });
 })();
