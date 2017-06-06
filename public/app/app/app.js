@@ -9,7 +9,7 @@
     angular.module('app').config( ['$stateProvider','$urlRouterProvider', Config ]);
 
     function Config ( $stateProvider, $urlRouterProvider ){
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/app/dashboard');
         $stateProvider
             .state('login',{
                 url:'/login',
@@ -23,13 +23,20 @@
                 controller:'SignupController',
                 controllerAs:'signup'
             })
-            .state('dashboard',{
+            .state('app',{
+                url:'/app',
+                templateUrl:'/App/app/app.html',
+                controller:'AppController',
+                controllerAs:'app',
+                abstract: true
+            })
+            .state('app.dashboard',{
                 url:'/dashboard',
                 templateUrl:'/App/dashboard/dashboard.html',
                 controller:'DashboardController',
                 controllerAs:'Dashboard'
             })
-            .state('users',{
+            .state('app.users',{
               url:'/users',
               templateUrl:'/App/users/users.html',
               controller:'UsersController',
@@ -42,13 +49,13 @@
     function LoginValidation($rootScope, $state) {
         $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
             var loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
-            if (toState.name == 'dashboard' && !loggedUser) {
+            if (toState.name == 'app.dashboard' && !loggedUser) {
               event.preventDefault();
               $state.go('login');
             }
             else if((toState.name == 'login' || toState.name == 'signup') && loggedUser) {
               event.preventDefault();
-              $state.go('dashboard');
+              $state.go('app.dashboard');
             }
           });
     }

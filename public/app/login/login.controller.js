@@ -21,7 +21,7 @@
                 vm.error = true;
             }else{
                 vm.user = {};
-                $state.go('dashboard');
+                $state.go('app.dashboard');
               //go to X view
             }
           };

@@ -24,11 +24,6 @@
             vm.updating = false;
         };
 
-        vm.logOut = function logOut() {
-            localStorage.removeItem("loggedUser");
-            $state.go('login');
-        };
-
         function getComments() {
             vm.loading = true;
             DashboardService.getComments()

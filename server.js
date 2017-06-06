@@ -23,5 +23,5 @@
     app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
     app.use(methodOverride());
 
-    app.listen(8080);
-    console.log("App listening on port 8080");
+    app.listen(3001);
+    console.log("App listening on port 3001");
